@@ -1,0 +1,20 @@
+CS 2200 Fall 2025
+Homework 2
+
+Name: Christopher Ling
+GT Username: cling40
+GTID: 903813567
+Section: B
+
+==========================================
+Question 1
+------------------------------------------
+// TODO: Answer question 1 from the HW pdf
+
+
+
+
+==========================================
+Question 2
+------------------------------------------
+// TODO: Answer question 2 from the HW pdf

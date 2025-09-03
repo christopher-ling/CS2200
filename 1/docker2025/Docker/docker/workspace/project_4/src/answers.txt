@@ -1,0 +1,76 @@
+CS 2200 Project 4
+
+Name: Christopher Ling
+GTID: 903813567
+GT_Email: cling40@gatech.edu
+Section: A
+
+==============================================
+
+___________________________
+Problem-1 (FCFS Scheduler)
+---------------------------
+1 CPUs
+Total Context Switches: 102
+Total execution time: 70.2 s
+Total time spent in READY state: 168.5 s
+
+2 CPUs
+Total Context Switches: 132
+Total execution time: 43.2 s
+Total time spent in READY state: 30.1 s
+
+4 CPUs
+Total Context Switches: 176
+Total execution time: 37.0 s
+Total time spent in READY state: 0.2 s
+
+
+There is not a linear relationship. The trend seems like exponential decay.
+The increase to 2 cpus shows a large decrease in execution time because the cpus can do work in parallel.
+The effect is less evident when we increase the number of cpus to 4 because any program will contain parts of work that must be done serially.
+
+
+________________________
+Problem-2 (Round-Robin)
+------------------------
+800ms
+Total Context Switches: 131
+Total execution time: 68.2 s
+Total time spent in READY state: 322.2 s
+
+600ms
+Total Context Switches: 156
+Total execution time: 67.9 s
+Total time spent in READY state: 302.3 s
+
+400ms
+Total Context Switches: 202
+Total execution time: 67.9 s
+Total time spent in READY state: 291.7 s
+
+200ms
+Total Context Switches: 362
+Total execution time: 67.9 s
+Total time spent in READY state: 284.6 s
+
+Comparing the total waiting time and timeslice length, it seems that there is a relationship as the timeslice decreases waiting time also decreases.
+In a real OS, the shortest timeslice is usually not the best choice because because it leads to excessive context switching, which adds significant overhead.
+
+
+________________________________
+Problem-3 (Preemptive Priority)
+--------------------------------
+To prevent starvation in a preemptive priority scheduler, operating systems use aging, which increases the effective priority of waiting processes over time, 
+ensuring that even low-priority tasks eventually get CPU time.
+
+
+
+
+___________________________________________
+Problem-4 (The Priority Inversion Problem)
+-------------------------------------------
+To prevent priority inversion while keeping a non-preemptive priority scheduler, we can implement priority inheritance. 
+This means that if a low-priority process (like the window manager) is blocking a high-priority process (like P1), 
+the scheduler temporarily raises the priority of the blocking process to match the high-priority one. Once the blocking action is complete, 
+the process’s priority returns to normal. This ensures that the high-priority task can proceed without being indirectly starved by medium-priority tasks.
