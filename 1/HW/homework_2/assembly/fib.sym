@@ -1,9 +1,0 @@
-main            : 0x0
-fibonacci       : 0x7
-base_case_0     : 0x1b
-base_case_1     : 0x1d
-teardown        : 0x1f
-stack           : 0x23
-testFibInput1   : 0x24
-testFibInput2   : 0x25
-testFibInput3   : 0x26

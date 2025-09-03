@@ -1,1 +1,0 @@
-docker exec -it cs2200 bash
