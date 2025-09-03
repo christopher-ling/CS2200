@@ -341,4 +341,4 @@ CircuitSim 1.11.0
 
 # Ignore folders by specific name
 1/
-Docker-files/
+Docker\ files/
